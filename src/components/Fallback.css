@@ -1,0 +1,112 @@
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #161616;
+}
+
+#circular-text {
+    position: relative;
+    top: 50vh;
+    left: 100vh;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0);
+    font-size: 24px;
+    font-weight: bolder;
+    border-radius: 100%;
+    box-shadow: 0 0 30px rgba(134, 134, 134, 0.2);
+    padding: 30px;
+    font-family: "Monument Extended";
+    transition: 0.5s ease-out;
+    -webkit-text-stroke: 1px rgba(225, 255, 255, 0.6);
+
+}
+
+#circular-text span {
+    position: absolute;
+
+} */
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 25px;
+  background: linear-gradient(#e54b4b, #ffa987);
+}
+#circular-text {
+  /* color: whitesmoke; */
+  position: relative;
+  border-radius: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+
+  background-color: linear-gradient(#ffa987, #b33951);
+
+  /* Character styling */
+
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 1px rgba(225, 255, 255, 0.6);
+
+  animation: spin 15s linear infinite;
+}
+
+#circular-text span {
+  position: absolute;
+  top: 210px;
+  left: 223px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-left: -290px;
+  margin-right: 80px;
+  /* top: 43.3%;
+    left: 46.8%; */
+  /* transform: translate(-50%, -50%); */
+
+  background-blend-mode: multiply;
+  animation: spinneg 15s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinneg {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

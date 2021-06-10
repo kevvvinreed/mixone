@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@800&display=swap');
+
+.text-container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: center;
+  justify-content: center;
+}
+
+.text-fragment-top {
+  font-family: 'Proza Libre', sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+
+  letter-spacing: -0.3vw;
+  word-spacing: 0.15vw;
+  line-height: 0.9;
+  font-size: 6vw;
+
+  margin-bottom: -2vw;
+  /* margin-top: ; */
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+}
+
+.text-full {
+  font-family: 'Proza Libre', sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+
+  letter-spacing: -0.3vw;
+  word-spacing: 0.15vw;
+  line-height: 0.9;
+  font-size: 6vw;
+
+  margin-bottom: -0.5vw;
+  /* margin-top: -40px; */
+  z-index: 3;
+}
+
+.text-fragment-bottom {
+  font-family: 'Proza Libre', sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+
+  letter-spacing: -0.3vw;
+  word-spacing: 0.15vw;
+  line-height: 0.9;
+  font-size: 6vw;
+
+  margin-top: -2vw;
+  margin-bottom: -0.5vw;
+
+  clip-path: polygon(0% 40%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 3px whitesmoke;
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@800&display=swap');
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+.service-name {
+  position: relative;
+  top: 20vh;
+  font-family: 'Exo', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.7vw;
+  line-height: 0;
+  font-size: 3vw;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  /* Creates 1 pixel thin black border around text */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.service-description {
+  margin-left: 25vw;
+  margin-right: 20vw;
+  font-family: 'Proza Libre', sans-serif;
+  margin-top: 33vh;
+  letter-spacing: -0.1vw;
+  word-spacing: 0.15vw;
+  line-height: 1.7;
+  font-size: 1vw;
+  z-index: 2;
+}
+
+.page-container {
+  width: 100vw;
+  /* height: calc(100vh - 80px); */
+
+  height: 100vh;
+  background-color: whitesmoke;
+  /* padding-top: 100px; */
+  position: relative;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.services-container {
+  width: 100vw;
+  /* height: calc(100vh - 80px); */
+  height: 100vh;
+
+  background-color: whitesmoke;
+  position: absolute;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.display-box {
+  position: absolute;
+  width: 100vw;
+  height: 40vh;
+  background-color: whitesmoke;
+}
+
+.row-break {
+  flex-basis: 100%;
+  width: 0;
+}
+
+/* ServicesNav */
+
+.sub-nav-container {
+  position: absolute;
+
+  top: 40vh;
+  width: 100vw;
+  height: 60px;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Audiowide', cursive;
+  font-size: 0.9rem;
+}
+
+.sub-nav-item {
+  padding-right: 4vw;
+  padding-left: 4vw;
+  cursor: pointer;
+  /* border-right: 1px solid black; */
+}
+.sub-nav-item:after {
+  border-left: 3px solid black;
+}
+
+.sub-nav-separator {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  color: transparent;
+}
+
+.sub-nav-separator-left {
+  border-right: 1px solid black;
+  color: transparent;
+}
+
+.sub-nav-separator-right {
+  border-left: 1px solid black;
+  color: transparent;
+}
+
+.sub-nav-item:hover {
+  margin-top: -2px;
+  padding-bottom: 20px;
+  transition: all 0.3s ease-out;
+}
