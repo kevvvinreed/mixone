@@ -1,5 +1,6 @@
 {
   "name": "frontend",
+  "homepage": "https://kevvvinreed.github.io/mixone/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
