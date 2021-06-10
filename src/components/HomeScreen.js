@@ -104,7 +104,7 @@ const HomeScreen = props => {
       <div id="subWindow" className="full-card-container">
         <div className="section" id="hero-section">
           <video
-            src="/videos/video-1.mp4"
+            src="/videos/landing-video.mp4"
             autoPlay
             loop
             muted
