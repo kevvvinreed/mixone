@@ -119,7 +119,7 @@ const HomeScreen = props => {
             </p> */}
 
           <TextAnimation></TextAnimation>
-          <div
+          {/* <div
             className="scroll-mobile"
             style={{ opacity: frame == 1 ? 0.7 : 0 }}
             onClick={() => scrollClick('gallery')}
@@ -300,7 +300,7 @@ const HomeScreen = props => {
               window.innerHeight -
               window.innerHeight * 2.3812
             }
-          />
+          /> */}
         </div>
       </div>
     </>

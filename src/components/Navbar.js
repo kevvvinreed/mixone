@@ -235,165 +235,48 @@ const Navbar = props => {
           <div className="menu-icon"></div>
           <ul className="nav-menu">
             <li className="nav-item">
-              {onHome ? (
-                <Link
-                  to="/"
-                  className="nav-links"
-                  onClick={() => {
-                    try {
-                      document
-                        .querySelector('#hero-section')
-                        .scrollIntoView({ behavior: 'smooth' });
-                    } catch (err) {
-                      if (err instanceof TypeError) {
-                        history.push('/');
-                        store.dispatch({ type: 'onHome' });
-                        (function checkExists() {
-                          if (!document.querySelector('#hero-section')) {
-                            window.requestAnimationFrame(checkExists);
-                          } else {
-                            document
-                              .querySelector('#hero-section')
-                              .scrollIntoView({ behavior: 'auto' });
-                          }
-                        })();
-                      }
-                    }
-                  }}
-                >
-                  Home
-                </Link>
-              ) : (
-                <LinkTransition
-                  className="nav-links"
-                  to="/"
-                  targetContainer="#root"
-                  sideEffect={true}
-                  props={props}
-                >
-                  Home
-                </LinkTransition>
-              )}
+              <LinkTransition
+                className="nav-links"
+                to="/"
+                targetContainer="#root"
+                sideEffect={true}
+                props={props}
+              >
+                Home
+              </LinkTransition>
             </li>
             <li className="nav-item">
-              {onHome ? (
-                <Link
-                  className="nav-links"
-                  onClick={() => {
-                    try {
-                      document
-                        .querySelector('#gallery')
-                        .scrollIntoView({ behavior: 'smooth' });
-                    } catch (err) {
-                      if (err instanceof TypeError) {
-                        history.push('/gallery');
-                        store.dispatch({ type: 'offHome' });
-                        (function checkExists() {
-                          if (!document.querySelector('#gallery')) {
-                            window.requestAnimationFrame(checkExists);
-                          } else {
-                            document
-                              .querySelector('#gallery')
-                              .scrollIntoView({ behavior: 'auto' });
-                          }
-                        })();
-                      }
-                    }
-                  }}
-                >
-                  Gallery
-                </Link>
-              ) : (
-                <LinkTransition
-                  className="nav-links"
-                  to="/gallery"
-                  targetContainer="#root"
-                  sideEffect={false}
-                  props={props}
-                >
-                  Gallery
-                </LinkTransition>
-              )}
+              <LinkTransition
+                className="nav-links"
+                to="/gallery"
+                targetContainer="#root"
+                sideEffect={false}
+                props={props}
+              >
+                Gallery
+              </LinkTransition>
             </li>
             <li className="nav-item">
-              {onHome ? (
-                <Link
-                  className="nav-links"
-                  onClick={() => {
-                    try {
-                      document
-                        .querySelector('#services')
-                        .scrollIntoView({ behavior: 'smooth' });
-                    } catch (err) {
-                      if (err instanceof TypeError) {
-                        history.push('/services');
-                        store.dispatch({ type: 'offHome' });
-                        (function checkExists() {
-                          if (!document.querySelector('#services')) {
-                            window.requestAnimationFrame(checkExists);
-                          } else {
-                            document
-                              .querySelector('#services')
-                              .scrollIntoView({ behavior: 'auto' });
-                          }
-                        })();
-                      }
-                    }
-                  }}
-                >
-                  Services
-                </Link>
-              ) : (
-                <LinkTransition
-                  className="nav-links"
-                  to="/services"
-                  targetContainer="#root"
-                  sideEffect={false}
-                  props={props}
-                >
-                  Services
-                </LinkTransition>
-              )}
+              <LinkTransition
+                className="nav-links"
+                to="/services"
+                targetContainer="#root"
+                sideEffect={false}
+                props={props}
+              >
+                Services
+              </LinkTransition>
             </li>
             <li className="nav-item">
-              {onHome ? (
-                <Link
-                  className="nav-links"
-                  onClick={() => {
-                    try {
-                      document
-                        .querySelector('#rentals')
-                        .scrollIntoView({ behavior: 'smooth' });
-                    } catch (err) {
-                      if (err instanceof TypeError) {
-                        history.push('/rentals');
-                        store.dispatch({ type: 'offHome' });
-                        (function checkExists() {
-                          if (!document.querySelector('#rentals')) {
-                            window.requestAnimationFrame(checkExists);
-                          } else {
-                            document
-                              .querySelector('#rentals')
-                              .scrollIntoView({ behavior: 'auto' });
-                          }
-                        })();
-                      }
-                    }
-                  }}
-                >
-                  Rentals
-                </Link>
-              ) : (
-                <LinkTransition
-                  className="nav-links"
-                  to="/rentals"
-                  targetContainer="#root"
-                  sideEffect={false}
-                  props={props}
-                >
-                  Rentals
-                </LinkTransition>
-              )}
+              <LinkTransition
+                className="nav-links"
+                to="/rentals"
+                targetContainer="#root"
+                sideEffect={false}
+                props={props}
+              >
+                Rentals
+              </LinkTransition>
             </li>
             <li className="nav-item">
               <Link

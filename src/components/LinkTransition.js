@@ -26,11 +26,11 @@ const LinkTransition = ({
       return;
     }
 
-    if (sideEffect) {
-      store.dispatch({ type: 'onHome' });
-    } else {
-      store.dispatch({ type: 'offHome' });
-    }
+    // if (sideEffect) {
+    //   store.dispatch({ type: 'onHome' });
+    // } else {
+    //   store.dispatch({ type: 'offHome' });
+    // }
     event.preventDefault();
 
     const opacity_start = 1;
