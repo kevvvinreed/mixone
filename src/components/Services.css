@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@800&display=swap');
 
-::-webkit-scrollbar {
-  width: 0px !important;
-}
 .service-name {
   position: relative;
   top: 20vh;
@@ -61,7 +58,7 @@
   background-color: #181818;
   position: absolute;
 
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 
   -webkit-touch-callout: none; /* iOS Safari */
