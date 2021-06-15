@@ -3,8 +3,7 @@
 
 ::-webkit-scrollbar-track {
   box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
-  /* border: 1px solid black;
-  background-color: white; */
+  background-color: #181818;
 }
 
 ::-webkit-scrollbar {
@@ -17,7 +16,7 @@
   border-radius: 4px;
 }
 
-.page-container {
+.rentals-page-container {
   width: 100vw;
   height: calc(100vh - 100px);
   background-color: #181818;

@@ -115,8 +115,10 @@ const EquipmentList = () => {
 
   useEffect(() => {
     document
-      .querySelector('.page-container')
+      .querySelector('.rentals-page-container')
       .addEventListener('scroll', handleScroll);
+
+    // document.querySelector('.page-container').style.backgroundColor = '#181818';
     // for (const el of navLinks) {
     //   el.style.color = 'white';
     // }
@@ -178,7 +180,7 @@ const EquipmentList = () => {
   return (
     <>
       {/* <div className="nav-space"></div> */}
-      <div className="page-container">
+      <div className="rentals-page-container">
         {jsxData}
         <div className="bottom-margin"></div>
       </div>

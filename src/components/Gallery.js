@@ -70,18 +70,20 @@ const Gallery = () => {
   };
 
   useEffect(async () => {
-    const media_id_list = await GetMediaList();
-    const extracted_media_id_list = media_id_list['data']['media']['data'];
-    console.log(media_id_list);
-    // setResData(media_id_list);
-    setTotalPosts(extracted_media_id_list.length);
+    // const media_id_list = await GetMediaList();
+    // const extracted_media_id_list = media_id_list['data']['media']['data'];
+    // console.log(media_id_list);
 
-    // const media_url_list = await GetPosts(extracted_media_id_list);
-    // console.log(media_url_list);
+    let extracted_media_id_list = [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+      22, 23, 24, 25, 26, 27, 28,
+    ];
+
+    setTotalPosts(extracted_media_id_list.length);
   }, []);
   return (
     <>
-      <div className="page-container">
+      <div className="gallery-page-container">
         {/* <div>
           <p style={{ color: 'white' }}>{resData}</p>
         </div> */}

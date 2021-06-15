@@ -142,6 +142,7 @@ const NavbarMobile = props => {
           }}
           className="nav-mobile-icon"
         />
+
         <ContactIcon className="nav-mobile-icon" onClick={handleClickOpen} />
 
         <Dialog
@@ -149,27 +150,14 @@ const NavbarMobile = props => {
           onClose={handleClose}
           aria-labelledby="form-dialog-title"
         >
-          <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              To subscribe to this website, please enter your email address
-              here. We will send updates occasionally.
+              For any questions please contact us at info@mixonesound.com
             </DialogContentText>
-            <TextField
-              autoFocus
-              margin="dense"
-              id="name"
-              label="Email Address"
-              type="email"
-              fullWidth
-            />
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
-              Cancel
-            </Button>
-            <Button onClick={handleClose} color="primary">
-              Subscribe
+              Close
             </Button>
           </DialogActions>
         </Dialog>
@@ -301,32 +289,18 @@ const Navbar = props => {
       </nav>
 
       <Dialog
-        class={classes.dialogContainer}
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
+            For any questions please contact us at info@mixonesound.com
           </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
+            Close
           </Button>
         </DialogActions>
       </Dialog>

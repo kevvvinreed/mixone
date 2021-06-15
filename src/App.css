@@ -3,8 +3,11 @@
 #212121 -background 2
 #FFFFFF -text
 */
-* {
-  -webkit-overflow-scrolling: touch;
+
+@media screen and (max-width: 960px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 body {

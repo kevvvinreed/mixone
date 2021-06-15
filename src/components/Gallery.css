@@ -1,8 +1,22 @@
 #root {
   overflow-x: hidden;
 }
+::-webkit-scrollbar-track {
+  box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+  background-color: #181818;
+}
 
-.page-container {
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border: black 1;
+  border-radius: 4px;
+}
+
+.gallery-page-container {
   height: 100%;
   width: 100vw;
   background-color: #181818;

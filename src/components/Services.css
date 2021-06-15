@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@800&display=swap');
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px !important;
 }
 .service-name {
   position: relative;
@@ -32,7 +32,7 @@
   z-index: 2;
 }
 
-.page-container {
+.services-page-container {
   width: 100vw;
   /* height: calc(100vh - 80px); */
 
@@ -58,7 +58,7 @@
   /* height: calc(100vh - 80px); */
   height: 100vh;
 
-  background-color: whitesmoke;
+  background-color: #181818;
   position: absolute;
 
   overflow-y: scroll;
@@ -89,11 +89,13 @@
 
 .sub-nav-container {
   position: absolute;
+  background-color: #212121;
 
   top: 40vh;
   width: 100vw;
   height: 60px;
-  border: 1px solid black;
+  border: 1px solid grey;
+  color: white;
 
   display: flex;
   flex-direction: row;
@@ -117,18 +119,18 @@
 }
 
 .sub-nav-separator {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   color: transparent;
 }
 
 .sub-nav-separator-left {
-  border-right: 1px solid black;
+  border-right: 1px solid white;
   color: transparent;
 }
 
 .sub-nav-separator-right {
-  border-left: 1px solid black;
+  border-left: 1px solid white;
   color: transparent;
 }
 
