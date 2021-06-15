@@ -8,16 +8,51 @@ const getRentalData = async () => {
   const res = await fetch(rentals);
   const data = await res.text();
 
-  const row = data.split('\n');
+  // const row = data.split('\n');
 
-  for (let i = 1; i < row.length; i++) {
-    const elems = row[i].split(',');
+  const csv = data.split('\n');
+  for (let line = 1; line < csv.length; line++) {
+    let parsed_string = csv[line];
+    const double_quote_delimiter = '%val=double_quote%';
+    parsed_string = parsed_string.replace(/""/g, double_quote_delimiter);
 
-    if (formattedData[elems[1]] == undefined) {
-      formattedData[elems[1]] = [];
+    parsed_string = parsed_string.match(/([^\",]*|(\"[^\"]*\")*)+/gm);
+
+    for (let i = 0; i < parsed_string.length; i++) {
+      parsed_string[i] = parsed_string[i].replace(/"/g, '');
+      const num_double_quotes =
+        parsed_string[i].split(double_quote_delimiter).length - 1;
+      if (num_double_quotes > 0) {
+        for (let j = 0; j < num_double_quotes; j++) {
+          parsed_string[i] = parsed_string[i].replace(
+            double_quote_delimiter,
+            '"'
+          );
+        }
+      }
     }
-    formattedData[elems[1]].push(elems);
+
+    let result = [];
+    for (let i = 0; i < parsed_string.length; i += 2) {
+      result.push(parsed_string[i]);
+    }
+
+    // Store formatted line into global formattedData variable
+    // formattedData[result[0]
+    if (formattedData[result[1]] == undefined) {
+      formattedData[result[1]] = [];
+    }
+    formattedData[result[1]].push(result);
+    // console.log(result);
   }
+  // for (let i = 1; i < row.length; i++) {
+  //   const elems = row[i].split(',');
+
+  // if (formattedData[elems[1]] == undefined) {
+  //   formattedData[elems[1]] = [];
+  // }
+  //   formattedData[elems[1]].push(elems);
+  // }
   return formattedData;
 };
 
