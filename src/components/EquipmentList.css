@@ -19,7 +19,7 @@
 
 .page-container {
   width: 100vw;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   background-color: #181818;
   padding-top: 100px;
   position: relative;

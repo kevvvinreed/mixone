@@ -8,8 +8,6 @@ const getRentalData = async () => {
   const res = await fetch(rentals);
   const data = await res.text();
 
-  // const row = data.split('\n');
-
   const csv = data.split('\n');
   for (let line = 1; line < csv.length; line++) {
     let parsed_string = csv[line];
@@ -38,21 +36,11 @@ const getRentalData = async () => {
     }
 
     // Store formatted line into global formattedData variable
-    // formattedData[result[0]
     if (formattedData[result[1]] == undefined) {
       formattedData[result[1]] = [];
     }
     formattedData[result[1]].push(result);
-    // console.log(result);
   }
-  // for (let i = 1; i < row.length; i++) {
-  //   const elems = row[i].split(',');
-
-  // if (formattedData[elems[1]] == undefined) {
-  //   formattedData[elems[1]] = [];
-  // }
-  //   formattedData[elems[1]].push(elems);
-  // }
   return formattedData;
 };
 
@@ -94,7 +82,7 @@ const CategoryContainer = props => {
             <i class="fa fa-angle-down" style={{ cursor: 'pointer' }}></i>
           )}
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          {props.category ? `${props.category}` : 'Category'}
+          {props.category ? `${props.category}` : 'Miscellaneous'}
         </span>
       </div>
 
