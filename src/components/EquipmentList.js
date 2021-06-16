@@ -71,6 +71,7 @@ const CategoryContainer = props => {
       <div
         className={props.sub ? 'sub-drop-container' : 'drop-container'}
         onClick={() => {
+          dispatchEvent(new CustomEvent('scroll'));
           setShowState(!showState);
         }}
       >
@@ -108,6 +109,17 @@ const EquipmentList = () => {
           el.style.opacity = '0';
         } else {
           el.style.opacity = '1';
+        }
+        if (window.innerWidth < 900) {
+          if (
+            el.getBoundingClientRect().bottom >=
+              window.innerHeight - (window.innerHeight / 100) * 5 ||
+            el.getBoundingClientRect().y < 100
+          ) {
+            el.style.opacity = '0';
+          } else {
+            el.style.opacity = '1';
+          }
         }
       }
     }

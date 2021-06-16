@@ -7,13 +7,16 @@ import Fallback from './components/Fallback';
 
 import store from './state/store.js';
 
-const Navbar = lazy(() => import('./components/Navbar'));
-const Rentals = lazy(() => import('./components/pages/Rentals'));
-const Services = lazy(() => import('./components/Services'));
-// const HomeScreen = lazy(() => import('./components/HomeScreen'));
+// const Navbar = lazy(() => import('./components/Navbar'));
+// const Rentals = lazy(() => import('./components/pages/Rentals'));
+// const Services = lazy(() => import('./components/Services'));
 
-const Gallery = lazy(() => import('./components/Gallery'));
-const Contact = lazy(() => import('./components/pages/Contact'));
+// const Gallery = lazy(() => import('./components/Gallery'));
+// const Contact = lazy(() => import('./components/pages/Contact'));
+import Navbar from './components/Navbar';
+import Rentals from './components/pages/Rentals';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
 
 const App = () => {
   store.subscribe(() => {
@@ -44,15 +47,14 @@ const App = () => {
           <AnimatePresence>
             <Switch>
               <>
-                {/* {loaded ? 'no' : <Route path="/" exact component={Fallback} />} */}
                 <Navbar />
                 <Route path="/" exact>
                   <HomeScreen />
+                  {/* <Fallback /> */}
                 </Route>
                 <Route path="/rentals" exact component={Rentals} />
                 <Route path="/services" component={Services} />
                 <Route path="/gallery" exact component={Gallery} />
-                <Route path="/contact" exact component={Contact} />
               </>
             </Switch>
           </AnimatePresence>

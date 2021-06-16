@@ -131,8 +131,16 @@
   color: transparent;
 }
 
-.sub-nav-item:hover {
-  margin-top: -2px;
-  padding-bottom: 20px;
-  transition: all 0.3s ease-out;
+@media screen and (min-width: 960px) {
+  .sub-nav-item:hover {
+    margin-top: -2px;
+    padding-bottom: 10px;
+    transition: all 0.6s ease-out;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .service-name {
+    font-size: 6vw;
+  }
 }

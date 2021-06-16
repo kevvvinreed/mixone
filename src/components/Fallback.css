@@ -1,33 +1,7 @@
-/* html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-    background: #161616;
+html {
+  overflow: hidden;
+  height: 100%;
 }
-
-#circular-text {
-    position: relative;
-    top: 50vh;
-    left: 100vh;
-    transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0);
-    font-size: 24px;
-    font-weight: bolder;
-    border-radius: 100%;
-    box-shadow: 0 0 30px rgba(134, 134, 134, 0.2);
-    padding: 30px;
-    font-family: "Monument Extended";
-    transition: 0.5s ease-out;
-    -webkit-text-stroke: 1px rgba(225, 255, 255, 0.6);
-
-}
-
-#circular-text span {
-    position: absolute;
-
-} */
 .container {
   height: 100vh;
   width: 100%;
@@ -36,17 +10,16 @@ body {
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  font-size: 25px;
-  background: linear-gradient(#181818, rgb(65, 65, 65));
+  font-size: 3vh;
+  background: linear-gradient(to bottom right, #181818, rgb(65, 65, 65));
 }
 #circular-text {
   /* color: whitesmoke; */
   position: relative;
-  border-radius: 100%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  padding: 30px;
 
-  background-color: linear-gradient(#181818, rgb(65, 65, 65));
+  /* padding: 1.56vw; */
+
+  background-color: linear-gradient(to bottom right, #181818, rgb(65, 65, 65));
 
   /* Character styling */
 
@@ -58,9 +31,15 @@ body {
 
 #circular-text span {
   position: absolute;
-  top: 210px;
-  left: 223px;
 
+  /* position: relative; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* top: 6.385vh;
+  left: -6.385vh; */
+  /* top: 22.34vh; */
+  /* left: 23.72vh; */
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -69,18 +48,34 @@ body {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
+/* 1920 x 940 */
 .logo {
   position: relative;
-  width: 120px;
-  height: 120px;
-  margin-left: -290px;
-  margin-right: 80px;
+  /* width: 120px; */
+  width: 12.77vh;
+  /* height: 120px; */
+
+  height: 12.77vh;
+  /* margin-left: -8.513vh; */
+  /* margin-top: -6.385vh; */
+  /* Circle radius - half width*/
+  /* margin-left: calc(-11vh + 6.385vh); */
+  /* Circle radius - half height*/
+  /* margin-top: calc(-11vh + 6.385vh); */
+
+  /* margin-right: -6.385vh; */
+  /* margin-top: -6.385vh; */
+  /* margin-bottom: -6.385vh; */
+  /* margin-left: -29.585vh; */
+  /* margin-right: 14.7vh; */
+  /* margin-top: 0vh; */
+  /* margin-right: 4.17vw; */
   /* top: 43.3%;
     left: 46.8%; */
   /* transform: translate(-50%, -50%); */
 
   background-blend-mode: multiply;
+  background-size: cover;
   animation: spinneg 15s linear infinite;
 }
 
