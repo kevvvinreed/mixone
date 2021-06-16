@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Spy Agency';
+  src: local('Spy Agency'),
+    url(../assets/font/spyagencyv3.ttf) format('truetype');
+}
+
 .navbar {
   background: transparent;
-  font-family: 'Audiowide', cursive;
+  font-family: 'Spy Agency';
   text-transform: uppercase;
   height: 10vh;
   width: 100vw;

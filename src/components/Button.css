@@ -5,6 +5,12 @@
   --primary: #fff;
 }
 
+@font-face {
+  font-family: 'Spy Agency';
+  src: local('Spy Agency'),
+    url(../assets/font/spyagencyv3.ttf) format('truetype');
+}
+
 .btn {
   padding: 8px 20px;
   border-radius: 2px;
@@ -34,8 +40,8 @@
   padding: 8px 20px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
-  font-family: 'Exo', sans-serif;
-  font-weight: bold;
+  font-family: 'Spy Agency';
+  margin-top: 1.5vh;
 }
 
 .btn--medium {

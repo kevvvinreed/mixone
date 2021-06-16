@@ -3,6 +3,7 @@ import './HomeScreen.css';
 import { Button } from './Button';
 import { Link, useHistory } from 'react-router-dom';
 import store from '../state/store.js';
+import VideoBackground from '../assets/videos/landing-video.mp4';
 
 import LinkTransition from './LinkTransition';
 
@@ -104,7 +105,7 @@ const HomeScreen = props => {
       <div id="subWindow" className="full-card-container">
         <div className="section" id="hero-section">
           <video
-            src="/videos/landing-video.mp4"
+            src={VideoBackground}
             autoPlay
             loop
             muted

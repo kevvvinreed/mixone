@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@800&display=swap');
+/* @import url('../assets/font/spyagencyv3.ttf'); */
+
+@font-face {
+  font-family: 'Spy Agency';
+  src: local('Spy Agency'),
+    url(../assets/font/spyagencyv3.ttf) format('truetype');
+}
 
 .text-container {
   -webkit-touch-callout: none;
@@ -19,7 +26,7 @@
 }
 
 .text-fragment-top {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Spy Agency', sans-serif;
   color: whitesmoke;
   text-transform: uppercase;
 
@@ -35,7 +42,7 @@
 }
 
 .text-full {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Spy Agency', sans-serif;
   color: whitesmoke;
   text-transform: uppercase;
 
@@ -50,7 +57,7 @@
 }
 
 .text-fragment-bottom {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Spy Agency', sans-serif;
   color: whitesmoke;
   text-transform: uppercase;
 
