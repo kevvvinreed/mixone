@@ -7,16 +7,18 @@ const Gallery = () => {
 
   const GalleryFeed = () => {
     let jsx = [];
-    for (let i = 1; i < totalPosts; i++) {
+    for (let i = 0; i < totalPosts; i++) {
       jsx.push(<div className="img-container"></div>);
-      if (i % 3 == 0) {
+      if ((i + 1) % 3 == 0) {
         jsx.push(<div className="flex-break"></div>);
       }
     }
 
     // Create invisible boxes for proper visual element alignment
+    console.log(`totalPosts: ${totalPosts}`);
+    console.log(`totalPosts % 3: ${totalPosts % 3}`);
     if (totalPosts % 3 != 0) {
-      for (let i = 0; i < totalPosts % 3; i++) {
+      for (let i = 3; i > totalPosts % 3; i--) {
         jsx.push(<div className="img-placeholder"></div>);
       }
     }
@@ -76,13 +78,14 @@ const Gallery = () => {
 
     let extracted_media_id_list = [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-      22, 23, 24, 25, 26, 27, 28,
+      22, 23, 24, 25, 26, 27, 28, 29,
     ];
 
     setTotalPosts(extracted_media_id_list.length);
   }, []);
   return (
     <>
+      <div className="nav-cover"></div>
       <div className="gallery-page-container">
         {/* <div>
           <p style={{ color: 'white' }}>{resData}</p>
