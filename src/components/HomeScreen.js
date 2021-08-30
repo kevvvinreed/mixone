@@ -111,6 +111,7 @@ const HomeScreen = props => {
             muted
             playsinline="true"
             disablePictureInPicture="true"
+            preload="auto"
           />
           {/* <h1 style={{ top: offsetY * 1.05 }} className="hero-h">
               WE BRING EVENTS TO LIFE
