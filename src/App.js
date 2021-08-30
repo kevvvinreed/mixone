@@ -4,8 +4,8 @@ import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Fallback from './components/Fallback';
-
 import store from './state/store.js';
+import HomeScreen from './components/HomeScreen';
 
 // const Navbar = lazy(() => import('./components/Navbar'));
 // const Rentals = lazy(() => import('./components/pages/Rentals'));
@@ -32,12 +32,12 @@ const App = () => {
     }
   };
 
-  const HomeScreen = lazy(() => {
-    return Promise.all([
-      import('./components/HomeScreen'),
-      new Promise(resolve => setTimeout(resolve, 3000)), // Set minimum hang time in ms
-    ]).then(([moduleExports]) => moduleExports);
-  });
+  // const HomeScreen = lazy(() => {
+  //   return Promise.all([
+  //     import('./components/HomeScreen'),
+  //     new Promise(resolve => setTimeout(resolve, 3000)), // Set minimum hang time in ms
+  //   ]).then(([moduleExports]) => moduleExports);
+  // });
 
   return (
     <>
